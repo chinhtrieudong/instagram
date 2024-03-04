@@ -20,6 +20,7 @@ const SuggestedProfile = ({
         // update the followers array of the logged in user (in this case, my profile)
         await updateLoggedInUserFollowing(loggedInUserDocId, profileId, false);
         // update the followers array of the user who has been followed
+
         await updateFollowedUserFollowers(profileDocId, userId, false);
     }
 
@@ -39,7 +40,7 @@ const SuggestedProfile = ({
                 <button
                     className="text-xs font-bold text-blue-medium"
                     type="button"
-                    onClick={() => console.log('Follow this')}
+                    onClick={handleFollowUser}
                 >
                     Follow
                 </button>

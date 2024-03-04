@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import FirebaseContext from '~/context/firebase';
-import UserContext from '~/hooks/user';
+import UserContext from '~/context/user';
 import * as ROUTES from '~/constants/routes';
 
 const Header = () => {
@@ -14,8 +14,15 @@ const Header = () => {
                 <div className="flex justify-between h-full">
                     <div className="text-gray-700 text-center flex items-center cursor-pointer">
                         <h1 className="flex justify-center w-full">
-                            <Link to={ROUTES.DASHBOARD} aria-label="Instagram logo">
-                                <img src="/images/Instagram_logo.svg.png" alt="Instagram" className="mt-2 w-2/12" />
+                            <Link
+                                to={ROUTES.DASHBOARD}
+                                aria-label="Instagram logo"
+                            >
+                                <img
+                                    src="/images/Instagram_logo.svg.png"
+                                    alt="Instagram"
+                                    className="mt-2 w-2/12"
+                                />
                             </Link>
                         </h1>
                     </div>
@@ -23,7 +30,10 @@ const Header = () => {
                         {user ? (
                             <>
                                 <>
-                                    <Link to={ROUTES.DASHBOARD} aria-label="Dashboard">
+                                    <Link
+                                        to={ROUTES.DASHBOARD}
+                                        aria-label="Dashboard"
+                                    >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
@@ -42,7 +52,9 @@ const Header = () => {
                                     <button
                                         type="button"
                                         title="Sign out"
-                                        onClick={() => firebaseApp.auth().signOut()}
+                                        onClick={() =>
+                                            firebaseApp.auth().signOut()
+                                        }
                                         onKeyDown={(event) => {
                                             if (event.key === 'Enter') {
                                                 firebaseApp.auth().signOut();
@@ -68,7 +80,7 @@ const Header = () => {
                                         <Link to={`/p/${user.displayName}`}>
                                             <img
                                                 className="rounded-full h-8 w-8 flex"
-                                                src={`/images/avatars/${user.displayName}.png`}
+                                                src={`/images/avatars/${user.displayName}.jpg`}
                                                 alt={`${user.displayName} profile`}
                                             />
                                         </Link>

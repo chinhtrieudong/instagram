@@ -3,6 +3,9 @@ module.exports = {
         removeDeprecatedGapUtilities: true,
     },
     theme: {
+        fill: (theme) => ({
+            red: theme('colors.red.primary'),
+        }),
         colors: {
             white: '#fff',
             blue: {
@@ -18,9 +21,13 @@ module.exports = {
                 primary: '#dbdbdb',
                 700: '#374151',
             },
+
             red: {
                 primary: '#ed4956',
             },
         },
+    },
+    variants: {
+        display: ['group-hover'],
     },
 };

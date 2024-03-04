@@ -18,8 +18,6 @@ const Suggestions = ({ userId, following, loggedInUserDocId }) => {
         }
     }, [userId, following]);
 
-    console.log(profiles);
-
     return !profiles ? (
         <Skeleton count={1} height={150} className="mt-5" />
     ) : (
@@ -32,7 +30,6 @@ const Suggestions = ({ userId, following, loggedInUserDocId }) => {
                     <SuggestedProfile
                         key={profile.docId}
                         profileDocId={profile.docId}
-                        userDocId={profile.docId}
                         username={profile.username}
                         profileId={profile.userId}
                         userId={userId}

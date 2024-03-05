@@ -37,7 +37,11 @@ const Login = () => {
         <div className="container flex mx-auto max-w-screen-md items-center h-screen ">
             <div className="flex w-3/5">
                 <img
+<<<<<<< HEAD
                     src="./instagram/images/iphone-with-profile.jpg"
+=======
+                    src="./instagram/images/iphone-with-profile.JPG"
+>>>>>>> 81702e49e60127d1fe1db73b4366724ee037b084
                     alt="iphone with instagram"
                 />
             </div>
@@ -45,7 +49,11 @@ const Login = () => {
                 <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
                     <h1 className="flex justify-center w-full">
                         <img
+<<<<<<< HEAD
                             src="./instagram/images/Instagram_logo.svg.png"
+=======
+                            src="/images/Instagram_logo.svg.png"
+>>>>>>> 81702e49e60127d1fe1db73b4366724ee037b084
                             alt="Instagram"
                             className="mt-2 w-6/12 mb-4"
                         />

@@ -58,7 +58,7 @@ const Header = ({
                     <img
                         className="rounded-full h-40 w-40 flex"
                         alt={`${user.userId} profile`}
-                        src={`/images/avatars/${profileUsername}.jpg`}
+                        src={`/instagram/images/avatars/${profileUsername}.jpg`}
                     />
                 )}
             </div>

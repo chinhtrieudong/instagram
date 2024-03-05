@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import UserContext from '~/context/user';
 
 const Image = ({ src, caption }) => {
-    return <img src={src} alt={caption} />;
+    return <img src={`./instagram/${src}`} alt={caption} />;
 };
 
 Image.propTypes = {
